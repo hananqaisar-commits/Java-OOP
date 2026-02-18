@@ -1,5 +1,0 @@
-*.idea
-*.class
-out
-*.swp
-*.spm

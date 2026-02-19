@@ -4,6 +4,8 @@ public class main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
+        Invoice i1 = new Invoice("Han7631", " Angle", 5, 545.000);
+        System.out.println(i1.getAmount());
         sc.close();
     }
 }
@@ -13,6 +15,7 @@ class Invoice {
     String partDescription;
     int quantity;
     double ppr;
+    private double amount;
 
     Invoice(String partNumber, String partDescription, int quantity, double ppr) {
         this.partNumber = partNumber;
@@ -51,6 +54,16 @@ class Invoice {
 
     double getppr() {
         return ppr;
+    }
+
+    void setAmount(double amount) {
+        if (quantity > 0 && ppr > 0) {
+            this.amount = quantity * ppr;
+        }
+    }
+
+    double getAmount() {
+        return amount;
     }
 }
 

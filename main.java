@@ -5,6 +5,7 @@ public class main {
         Scanner sc = new Scanner(System.in);
 
         Invoice i1 = new Invoice("Han7631", " Angle", 5, 545.000);
+        i1.setAmount(987.99);
         System.out.println(i1.getAmount());
         sc.close();
     }

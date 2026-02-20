@@ -29,7 +29,7 @@ class Solve {
             }
 
         }
-        System.out.println("Total steps: " + count);
+        System.out.println("Final value: 1" + "  Total steps: " + count);
     }
 }
 

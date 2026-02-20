@@ -4,9 +4,24 @@ public class main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
-        Invoice i1 = new Invoice("Han7631", " Angle", 5, 545.000);
-        i1.setAmount(987.99);
-        System.out.println(i1.getAmount());
+        Invoice i1 = new Invoice();
+        // Invoice i1 = new Invoice("Han7631", " Angle", 5, 545.000);//this can also
+        // used in my code
+
+        System.out.println("Enter quantity to buy: ");
+        int quantity = sc.nextInt();
+
+        i1.setquantity(quantity);
+        i1.setppr(440.90);
+        i1.setNumber("101101");
+        i1.setDescription(
+                "Instruction (Read carefully)\nIt is used for repairing computer.Use it in computers only otherwise it will damage.");
+
+        System.out.println("Tool number: " + i1.getNumber());
+        System.out.println("Quantity to buy: " + i1.getquantity());
+        System.out.println("Price per unit: " + i1.getppr());
+        System.out.println(i1.getDescription());
+
         sc.close();
     }
 }
@@ -25,8 +40,14 @@ class Invoice {
         this.ppr = ppr;
     }
 
+    Invoice() {// default constructor
+
+    }
+
     void setNumber(String number) {
+
         partNumber = number;
+
     }
 
     String getNumber() {
@@ -42,10 +63,14 @@ class Invoice {
     }
 
     void setquantity(int quantity) {
-        this.quantity = quantity;
+        if (quantity > 0) {
+            this.quantity = quantity;
+        } else
+            quantity = 0;
     }
 
     int getquantity() {
+
         return quantity;
     }
 

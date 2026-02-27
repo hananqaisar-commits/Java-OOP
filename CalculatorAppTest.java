@@ -12,6 +12,15 @@ class SimpleCalculator {
     public int Multiply(int a, int b) {
         return a * b;
     }
+
+    public int divide(int a, int b) {
+        return a / b;
+    }
+
+    public int modulus(int a, int b) {
+        return a % b;
+    }
+
 }
 
 public class CalculatorAppTest {
@@ -29,7 +38,10 @@ public class CalculatorAppTest {
         System.out.println("Add: " + calc1.add(a, b));
         System.out.println("Subtract: " + calc1.subtract(a, b));
         System.out.println("Multiply: " + calc1.Multiply(a, b));
+        System.out.println("Divide: " + calc1.divide(a, b));
+        System.out.println("Reminder is: " + calc1.modulus(a, b));
 
+        input.close();
     }
 }
 

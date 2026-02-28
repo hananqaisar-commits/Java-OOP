@@ -6,9 +6,12 @@ public class Constructor {
         Scanner sc = new Scanner(System.in);
 
         Parent p1 = new Parent("Qaisar Abbas");
+        Parent p2 = new Parent(p1);// this is copy constructor
+        p1.name = "Qaisar";
         Child c1 = new Child("Hanan Qaisar");
 
-        System.out.println(p1.name());
+        System.out.println("constructor: " + p1.name());
+        System.out.println(("Copy constructor: " + p2.name()));
         System.out.println(c1.info());
 
         sc.close();
@@ -20,6 +23,10 @@ class Parent {
 
     public Parent(String name) {
         this.name = name;
+    }
+
+    public Parent(Parent p1) {
+        this.name = p1.name;
     }
 
     public String name() {
@@ -42,7 +49,7 @@ class Child extends Parent {
 
     public String info() {
 
-        System.out.println("Father name: " + name);
+        System.out.println("Father name: " + name());
         return childName;
     }
 

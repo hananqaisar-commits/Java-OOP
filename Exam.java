@@ -65,6 +65,7 @@ public class Exam {
         Student.displayUniversity();
     }
 }
+
 // 1. Create 3 student objects and display their information.
 // 2. Add a static variable courseName.
 // 3. Add a final variable PASSING_MARKS.

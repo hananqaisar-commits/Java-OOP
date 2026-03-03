@@ -14,22 +14,31 @@ class BankAccount {
 
     public void deposit(double amount) {
 
-        balance += amount;
+        if (amount > 0) {
+            balance += amount;
+        } else {
+            System.out.println("Insufficient balance");
+        }
 
     }
 
     public void withDraw(double withdraw) {
 
         System.out.println("Enter amount Withdraw: ");
-        balance -= withdraw;
+        if (withdraw > 0) {
+            balance -= withdraw;
+
+        } else {
+            System.out.println("Insufficient balance");
+        }
 
     }
 
-    public void display() {
+    public boolean display() {
 
         System.out.println("Account number: " + accountNo);
         System.out.println("Balance: " + balance);
-
+        return true;
     }
 
     public boolean checkpin() {
@@ -57,6 +66,7 @@ class BankAccount {
         input.close();
         return false;
     }
+
 }
 
 public class Hanan {
@@ -68,19 +78,46 @@ public class Hanan {
         System.out.println("===========Welcomr to ATM===========");
         if (b1.checkpin()) {
 
-            System.out.println("Enter  amount to deposit: ");
-            double deposit = sc.nextDouble();
-            b1.deposit(deposit);
+            System.out.println("Enter choice: ");
+            int choose = sc.nextInt();
 
-            System.out.println("Enter amount to withdraw: ");
-            double withdraw = sc.nextDouble();
-            b1.withDraw(withdraw);
+            while (choose != 0) {
+                switch (choose) {
+
+                    case 1: {
+                        System.out.println("Enter  amount to deposit: ");
+                        double deposit = sc.nextDouble();
+                        b1.deposit(deposit);
+
+                        break;
+                    }
+                    case 2: {
+                        System.out.println("Enter amount to withdraw: ");
+                        double withdraw = sc.nextDouble();
+                        b1.withDraw(withdraw);
+
+                        break;
+
+                    }
+                    case 3: {
+                        System.out.println(b1.display());
+
+                        break;
+                    }
+                    case 0: {
+                        break;
+                    }
+
+                }
+                System.out.println("next choice: ");
+                choose = sc.nextInt();
+            }
+            System.out.println("Thanks for using");
+            sc.close();
+
         }
-        sc.close();
-
     }
 }
-
 // 2. Bank Account System (OOP Practice)
 
 // Create class BankAccount

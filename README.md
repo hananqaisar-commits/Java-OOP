@@ -12,9 +12,3 @@ This repository contains my **OOP learning exercises and projects** in Java.
 - Demonstrates **parent & child class relationship and method inheritance**  
 5. **Calculator (Polymorphism Example)**  
 - Illustrates **method overloading with same method name and different parameters**  
-6. **Student Examination System**  
-- Input students, **record scores, calculate results, and display performance**  
-7. **Coffee Shop**  
-- Simple **order and billing system** for managing customer purchases  
-8. **Toll Booth**  
-- Display **price chart, enter vehicle type, calculate toll, and track total daily collection**  

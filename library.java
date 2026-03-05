@@ -1,0 +1,43 @@
+import java.util.Scanner;
+
+public class library {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+
+        Book b1 = new Book();
+
+        b1.borrow();
+        b1.returnBook();
+
+        sc.close();
+    }
+}
+
+class Book {
+    public String title;
+    public String author;
+    private String ISBN;
+
+    public Book() {
+
+    }
+    public void borrow() {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.println("Enter borrower name: ");
+        String borrower = sc.nextLine();
+        System.out.println("Enter book name: ");
+        String book = sc.nextLine();
+    }
+
+    public void returnBook() {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.println("Enter borrower name: ");
+        String borrower = sc.nextLine();
+        System.out.println("Enter book name: ");
+        String book = sc.nextLine();
+    }
+
+}

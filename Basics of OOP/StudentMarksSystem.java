@@ -9,6 +9,9 @@ public class StudentMarksSystem {
         Input_Output i1 = new Input_Output();
         i1.input(marks, sc);// input method and passing sc
         i1.output(marks);// output method
+        int[] students = new int[3];
+        i1.add(marks, students);
+        System.out.println("Average: " + i1.average(students));
 
         sc.close();
     }
@@ -40,5 +43,27 @@ class Input_Output {
             System.out.print("\b\b" + " }");
             System.out.println("");
         }
+    }
+
+    public void add(int[][] marks, int[] students) {
+
+        int i = 0;
+        for (int[] add : marks) {
+            for (int mps : add)// mps--->marks per subject
+            {
+                students[i] += mps;
+
+            }
+            System.out.println("Student " + (i + 1) + " total marks: " + students[i]);
+            i++;
+        }
+    }
+
+    public double average(int[] mark) {
+        double total = 0;
+        for (int i = 0; i < mark.length; i++) {
+            total += mark[i];
+        }
+        return total / mark.length;
     }
 }

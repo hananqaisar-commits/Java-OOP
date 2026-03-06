@@ -11,6 +11,7 @@ public class StudentMarksSystem {
         i1.output(marks);// output method
         int[] students = new int[3];
         i1.add(marks, students);
+        System.out.println("Highest marks (Student): " + i1.highest(students));
         System.out.println("Average: " + i1.average(students));
 
         sc.close();
@@ -52,7 +53,6 @@ class Input_Output {
             for (int mps : add)// mps--->marks per subject
             {
                 students[i] += mps;
-
             }
             System.out.println("Student " + (i + 1) + " total marks: " + students[i]);
             i++;
@@ -65,5 +65,16 @@ class Input_Output {
             total += mark[i];
         }
         return total / mark.length;
+    }
+
+    public int highest(int[] mark) {
+        int highest = 0;
+        for (int i = 0; i < mark.length; i++) {
+            if (mark[i] > highest) {
+                highest = mark[i];
+            }
+
+        }
+        return highest;
     }
 }

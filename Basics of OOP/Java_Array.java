@@ -5,6 +5,7 @@ public class Java_Array {
         Scanner input = new Scanner(System.in);
 
         int[] array1 = new int[5];
+        int[] arr1 = { 1, 5, 1, 5 };
         // or
         int array2[] = new int[5];
         // or

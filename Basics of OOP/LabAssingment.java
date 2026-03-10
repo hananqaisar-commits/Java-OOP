@@ -3,7 +3,7 @@ import java.util.Scanner;
 class Student {
     static public int countStudent = 0;
     private String name;
-    private int balance;
+    public int balance;
 
     public Student() {
         Student.countStudent++;
@@ -17,7 +17,7 @@ class Student {
         return name;
     }
 
-    public void setBalance(int balance) {
+    private void setBalance(int balance) {
         this.balance = balance;
     }
 
@@ -34,6 +34,11 @@ public class LabAssingment {
         String name = input.nextLine();
         System.out.print("Enter Balance: ");
         int balance = input.nextInt();
+        if (balance > 45000) {
+            System.out.println("Now give you freind a party");
+        } else {
+            System.out.println("Thanks");
+        }
 
         Student.countStudent = 1;
         // Student s1 = new Student();

@@ -12,7 +12,7 @@ public class Add_2Matrics {
 
         System.out.println("Want to enter matrics 1 or matrics 2 ?(0 to exit)");
         int n = sc.nextInt();
-        while (n != 0) {
+        while (n != 0) {// did't exit untill user enter 0
             switch (n) {
                 case 1:
 
@@ -36,7 +36,7 @@ public class Add_2Matrics {
             n = sc.nextInt();
 
         }
-
+        // output
         m1.output(matricsElement1);
         System.out.println("+");
         m2.output(matricsElement2);

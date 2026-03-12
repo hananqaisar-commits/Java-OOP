@@ -13,6 +13,7 @@ public class one_dArray_StudentMarks {
         System.err.println("Highest marks: " + student.highest(marks));
         System.err.println("lowest marks: " + student.lowest(marks));
         System.err.println("Average marks: " + student.average(marks));
+
         sc.close();
     }
 }

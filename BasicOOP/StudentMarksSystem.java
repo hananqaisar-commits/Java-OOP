@@ -1,4 +1,4 @@
-package basicoop;
+package StudentMarksSystem;
 
 import java.util.Scanner;
 

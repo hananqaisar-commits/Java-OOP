@@ -44,6 +44,8 @@ class Person {
 class Students extends Person {
     private String studentrollno;
     char[] grades = new char[6];
+    int gradeCount;
+
 }
 
 public class universitySystem {

@@ -7,7 +7,7 @@ public class main2 {
         children c1 = new children();
         c1.name = "Hanan Qaisar";
         c1.age = 17;
-        c1.school = "Comsat University Islamabad";
+        c1.school = "Comsats University Islamabad";
         c1.Gender = "Male";
         sc.close();
 

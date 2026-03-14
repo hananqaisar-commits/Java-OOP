@@ -3,7 +3,7 @@ import java.util.Scanner;
 class Student {
     static String universityName = "Comsat University";
     static int studentCount = 0;
-    String name;
+    public String name;
 
     int rollNo;
     double marks;

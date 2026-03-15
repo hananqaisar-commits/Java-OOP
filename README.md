@@ -8,7 +8,6 @@ A structured collection of Object-Oriented Programming concepts and projects bui
 ```
 Java-OOP/
 ├── BasicOOP/              # Core OOP concepts
-├── Basics of OOP/         # Foundational exercises
 ├── OOP_Assignments/       # Course assignments
 └── Projects/
     ├── ATM/               # BankAccount simulation

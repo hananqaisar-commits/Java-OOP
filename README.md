@@ -1,14 +1,68 @@
-# Object-Oriented Programming Projects (Java)
+# Java OOP — Learning Repository
 
-This repository contains my **OOP learning exercises and projects** in Java.
+A structured collection of Object-Oriented Programming concepts and projects built in Java.
 
-1. **OOP Basics**  
-- Small programs to understand **classes, objects, constructors, and core OOP principles**  
-2. **ATM Simulation**  
-- Simulates an ATM system with **PIN verification, balance inquiry, deposit, and withdrawal**  
-3. **Person Class**  
-- Encapsulation example using **private variables, getters/setters, and constructor usage**  
-4. **Inheritance Example (Animal & Dog)**  
-- Demonstrates **parent & child class relationship and method inheritance**  
-5. **Calculator (Polymorphism Example)**  
-- Illustrates **method overloading with same method name and different parameters**  
+---
+
+## Repository Structure
+```
+Java-OOP/
+├── BasicOOP/              # Core OOP concepts
+├── Basics of OOP/         # Foundational exercises
+├── OOP_Assignments/       # Course assignments
+└── Projects/
+    ├── ATM/               # BankAccount simulation
+    ├── University/        # University staff system
+    └── Library/           # Library management
+```
+
+---
+
+## Topics Covered
+
+| Topic | Concepts |
+|---|---|
+| Classes & Objects | Constructors, instance variables, methods |
+| Encapsulation | Private fields, getters & setters |
+| Inheritance | Parent/child classes, method overriding |
+| Polymorphism | Method overloading, runtime polymorphism |
+| Abstraction | Abstract classes, interfaces |
+| Has-A Relationship | Object composition |
+| Copy Constructors | Deep copy vs shallow copy |
+
+---
+
+## Projects
+
+### ATM Simulation
+Simulates a basic ATM system.
+- PIN verification
+- Balance inquiry
+- Deposit & withdrawal
+
+### University Staff System
+Models a university's staff hierarchy using inheritance and Has-A relationships.
+
+### Library Management
+Handles book records with encapsulation and basic security logic.
+
+---
+
+## How to Run
+```bash
+# Compile any file
+javac FileName.java
+
+# Run it
+java FileName
+```
+
+Requires **Java 11+**. Built and tested with **IntelliJ IDEA**.
+
+---
+
+## About
+
+**Student:** Hanan Qaisar  
+**Focus:** Core Java & OOP principles  
+**Status:** Actively learning

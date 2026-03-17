@@ -16,8 +16,13 @@ class Battery {
     }
 
     public Battery(Phone deepCopy) {
-        this.capacity = deepCopy.battery.capacity;
-        this.type = deepCopy.battery.type;
+        if (deepCopy.battery != null) {
+            this.capacity = deepCopy.battery.capacity;
+            this.type = deepCopy.battery.type;
+        } else {
+            this.capacity = 4000;
+            this.type = "Li-ion";
+        }
     }
 
     public void setCapacity(int capacity) {

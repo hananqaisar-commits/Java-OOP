@@ -10,14 +10,12 @@ class Store {
     public Store(String name, String location) {
         this.name = name;
         this.location = location;
+        phones = new ArrayList<>();// Now each phones arraylist belongs to each Store
     }
 
     public void addPhone(Phone p) {
-        phones = new ArrayList<>();
+
         phones.add(p);
-
-        System.out.println(phones);
-
         ++countMobile;
     }
 

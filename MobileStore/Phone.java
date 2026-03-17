@@ -21,19 +21,24 @@ class Phone {
         }
     }
 
-    public Phone(String brand, String model, double price, Battery b) {
-        this.brand = brand;
-        this.model = model;
-        if (price > 0) {
-            this.price = price;
+    public Phone(Phone phone) {// this is copy constructor
+
+        this.battery = new Battery(phone);// deep copy constructor
+        this.brand = phone.brand;
+        this.model = phone.model;
+        if (phone.price > 0) {
+            this.price = phone.price;
         } else {
             System.out.println("Invalid");
         }
     }
 
-    // public Phone(Battery battery) {
-
-    // }
+    public Phone(Phone p, Battery b) {
+        this.brand = p.brand;
+        this.model = p.model;
+        this.price = p.price;
+        this.battery = new Battery(b.getCapacity(), b.getType());
+    }
 
     public void setPrice(double price) {
         if (price > 0) {
@@ -74,6 +79,6 @@ class Phone {
     @Override
     public String toString() {
         return brand + " " + model + " " + " price: " + price + " Battery type: " + battery.getType()
-                + " Capacity(mAH): " + battery.getCapacity();
+                + " Capacity(mAH): " + battery.getCapacity() + "\n";
     }
 }

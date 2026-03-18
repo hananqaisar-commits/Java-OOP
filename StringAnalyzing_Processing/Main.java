@@ -11,8 +11,9 @@ public class Main {
         s1.input(order);
         s1.printReverse();
         System.out.println("\nVowels : " + s1.countVowels());
-        System.out.println(s1.isPalindrome());
+        System.out.println("Palindrome: " + s1.isPalindrome());
 
+        s1.buildStudentReport(new String[] { "Hanan", "Qaisar", "Ahtisham" }, new double[] { 67, 65, 45 });
         sc.close();
     }
 }
@@ -50,12 +51,19 @@ class StringAnalyzer {
         int j = word.length;
 
         for (int i = 0; i < word.length; i++) {
-            if (word[i].equalsIgnoreCase(word[j - 1])) {
+            if (word[i].equalsIgnoreCase(word[j - 1])) {// (j-1)bcz indexing start from 0 and end at n-1
                 j--;
             } else {
                 return false;
             }
         }
         return true;
+    }
+
+    public void buildStudentReport(String[] names, double[] scores) {
+        System.out.println("Student Report: ");
+        for (int i = 0; i < names.length; i++) {
+            System.out.println((i + 1) + ". " + names[i] + " --- " + scores[i]);
+        }
     }
 }

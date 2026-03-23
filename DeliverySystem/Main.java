@@ -9,8 +9,15 @@ public class Main {
         Resturant shinwari = new Resturant();
         shinwari.addMenu(new MenuItem("Biryani", 270, "Special"));
         shinwari.addMenu(new MenuItem("Mutton", 4560.50, "Signature"));
+        System.out.println(shinwari.menuitem);
 
-        shinwari.menuitem();
+        Order o1 = new Order();
+        o1.setCustomer_name("Hanan Qaisar");
+        o1.addItem("Biryani");
+        o1.addItem("Mutton");
+
+        System.out.println(o1);
+
         sc.close();
     }
 }
@@ -83,8 +90,14 @@ class Resturant {
 
     public void addMenu(MenuItem menuItem) {
         menuitem.add(menuItem);
+        ++Order.orderid;
+
     }
 
+    @Override
+    public String toString() {
+        return "Menu" + menuitem;
+    }
 }
 
 class Order {
@@ -96,18 +109,46 @@ class Order {
     public Order(String customer_name, double total_price) {
         this.customer_name = customer_name;
         this.total_price = total_price;
+        items = new ArrayList<>();
+
+    }
+
+    public Order() {// default constructor
+        items = new ArrayList<>();
 
     }
 
     public void setCustomer_name(String customer_name) {
         if (customer_name == null || customer_name.trim().isEmpty()) {
-            this.customer_name = customer_name;
-        } else {
             System.out.println("invalid");
+
+        } else {
+            this.customer_name = customer_name;
         }
     }
 
-    public String tostString() {
-        return "Customer name: " + customer_name + "\n" + "Total price: " + total_price;
+    public String getCustomer_name() {
+        return customer_name;
+    }
+
+    public static int getOrderid() {
+        return orderid;
+    }
+
+    public double getTotal_price() {
+        double total = 0;
+        for (MenuItem m : items) {
+            total += m.getPrice();
+        }
+        return total;
+    }
+
+    public void addItem(String item) {
+
+    }
+
+    @Override
+    public String toString() {
+        return "Customer name: " + customer_name + "\n" + "Total price: " + getTotal_price();
     }
 }

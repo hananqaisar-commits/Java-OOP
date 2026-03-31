@@ -4,12 +4,12 @@ class Order {
     private String CustomerName;
     private static int orderid;
     private double totalprice;
-    ArrayList<Menuitem> items;
+    ArrayList<Menuitem> items = new ArrayList<>();
 
     public Order(String CustomerName, String items) {
         {
             this.CustomerName = CustomerName;
-            items = new ArrayList<>();
+            
             ++orderid;
         }
     }

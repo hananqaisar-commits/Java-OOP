@@ -1,4 +1,4 @@
-# Compiled class files
+\# Compiled class files
 *.class
 
 # Bash file
@@ -18,3 +18,6 @@ bin/
 Thumbs.db
 
 *.zip
+*.docx
+*.swn
+*.txt

@@ -5,7 +5,7 @@ public class Main {
         HN.setMenu(new Menuitem("Heer Ghost", "Special Masala", 43500.90));
         HN.setMenu(new Menuitem("Ranjha Ghost", "Special", 41500.90));
 
-        Order o1 = new Order("Hanan Qaisar", "Heer Ghosht");
+        Order o1 = new Order("Hanan Qaisar", items.getName());
         System.out.println(HN);
     }
 }

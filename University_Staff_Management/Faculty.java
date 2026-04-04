@@ -40,8 +40,9 @@ class Faculty extends Employee {
         return this.researchBonous + getBaseSalary();
     }
 
+    @Override
     public String toString() {
         return super.toString()
-                + String.format("Department: %s | Research bonous: %.3f", getDepartment(), getResearchBonous());
+                + String.format("Department: %s | Research bonous: %.3f\n", getDepartment(), getResearchBonous());
     }
 }

@@ -3,8 +3,10 @@ package University_Staff_Management;
 class Person {
     private String name;
     private int age;
+    public static int count;
 
     public Person(String name, int age) {
+        ++count;
         this.name = name;
         this.age = age;
     }
@@ -33,7 +35,13 @@ class Person {
         return name;
     }
 
+    public void count() {
+        System.out.print("---Staff " + count + "---\n");
+    }
+
+    @Override
     public String toString() {
-        return String.format("Name: %s | Age: %2d", getName());
+        count();
+        return String.format("Name: %s | Age: %2d \n", getName(), getAge());
     }
 }

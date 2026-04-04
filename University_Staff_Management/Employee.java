@@ -38,9 +38,10 @@ class Employee extends Person {
         return id;
     }
 
+    @Override
     public String toString() {
-        return super.toString() + String.format("Id: %s | Base salary: ", getId(), getBaseSalary(), getAge())
-                + String.format("Final Salary: %.3f", calcsalary());
+        return super.toString() + String.format("Id: %s | Base salary: \n", getId(), getBaseSalary())
+                + String.format(" Final Salary: %.3f\n", calcsalary());
     }
 
 }

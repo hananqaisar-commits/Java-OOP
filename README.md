@@ -6,9 +6,20 @@ This repository contains several Java Object-Oriented Programming (OOP) projects
 
 ## Directory Structure
 
-Java_OOP/ ├── BasicOOP/ │ ├── BasicOOP.java │ └── ... ├── CricketTeamManagement/ │ ├── CricketTeam.java │ ├── Player.java │ └── ... ├── DeliverySystem/ │ ├── DeliveryManager.java │ └── ... ├── MobileStore/ │ ├── Mobile.java │ ├── Store.java │ └── ... ├── OOP_Assignments/ │ ├── Assignment1.java │ └── ... ├── StringAnalyzing_Processing/ │ ├── StringAnalyzer.java │ └── ... ├── BankAccountTest.java ├── Triangle.java ├── University_Staff.java ├── main.java └── README.md
-Code
-
+Folder/File	Type	Contains	Relation
+Java_OOP/	Root Directory	All folders + root files	Parent of everything
+BasicOOP/	Sub-folder	BasicOOP.java, ...	Child of Java_OOP/
+CricketTeamManagement/	Sub-folder	CricketTeam.java, Player.java, ...	Child of Java_OOP/
+DeliverySystem/	Sub-folder	DeliveryManager.java, ...	Child of Java_OOP/
+MobileStore/	Sub-folder	Mobile.java, Store.java, ...	Child of Java_OOP/
+OOP_Assignments/	Sub-folder	Assignment1.java, ...	Child of Java_OOP/
+StringAnalyzing_Processing/	Sub-folder	StringAnalyzer.java, ...	Child of Java_OOP/
+BankAccountTest.java	Root File	—	Child of Java_OOP/, no folder
+Triangle.java	Root File	—	Child of Java_OOP/, no folder
+University_Staff.java	Root File	—	Child of Java_OOP/, no folder
+main.java	Root File	—	Child of Java_OOP/, no folder
+README.md	Root File	—	Child of Java_OOP/, no folder
+Summary
 
 ## Projects Overview
 

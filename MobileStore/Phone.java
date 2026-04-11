@@ -21,23 +21,16 @@ class Phone {
         }
     }
 
-    public Phone(Phone phone) {// this is copy constructor
+    public Phone(Phone other) {// this is copy constructor
 
-        this.battery = new Battery(phone);// deep copy constructor
-        this.brand = phone.brand;
-        this.model = phone.model;
-        if (phone.price > 0) {
-            this.price = phone.price;
+        this.battery = new Battery();// deep copy constructor
+        this.brand = other.brand;
+        this.model = other.model;
+        if (other.price > 0) {
+            this.price = other.price;
         } else {
             System.out.println("Invalid");
         }
-    }
-
-    public Phone(Phone p, Battery b) {
-        this.brand = p.brand;
-        this.model = p.model;
-        this.price = p.price;
-        this.battery = new Battery(b.getCapacity(), b.getType());
     }
 
     public void setPrice(double price) {

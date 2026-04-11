@@ -16,7 +16,7 @@ class Library1 {
     }
 
     public ArrayList<LibraryItem> getLibItems() {
-        return items;
+        return this.items;
     }
 
     public void display() {

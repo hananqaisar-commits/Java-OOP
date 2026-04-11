@@ -10,6 +10,10 @@ public class Main {
         HN.addMenu(m2);
         System.out.println(HN);
 
+        Resturant Monal = new Resturant("Islamabad", 9.8, "Monal");
+        Menuitem m3 = new Menuitem(m2);
+        Monal.addMenu(m3);
+
         Order o1 = new Order("Hanan Qaisar");
         o1.addOrder(m2);
         o1.addOrder(m1);

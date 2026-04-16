@@ -22,9 +22,6 @@ class Student {
     public java.lang.String toString() {
         return "Student{" +
                 "name='" + name + '\'' +
-                ", age=" + age +
-                '}';
+
     }
 }
-
-

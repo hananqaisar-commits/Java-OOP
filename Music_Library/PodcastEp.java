@@ -32,6 +32,7 @@ class PodcastEp extends Media {
     @Override
     public void play() {
         super.play();
-        System.out.printf("Playing podcast:%s %s Ep: %-3d\n", getTitle(), getShowName(), getEpNo());
+        System.out.printf("Playing podcast:%s %s Ep: %-3d (Duration: %f)\n", getTitle(), getShowName(), getEpNo(),
+                getDurationSeconds());
     }
 }

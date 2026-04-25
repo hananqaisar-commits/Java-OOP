@@ -1,6 +1,6 @@
-class Media implements Payable {
+class Media implements Payable, Comparable<Media> {
     private String title;
-    private double durationSeconds;
+    public double durationSeconds;
     private int releaseYear;
     public Artist artist;
 
@@ -31,8 +31,10 @@ class Media implements Payable {
         return title;
     }
 
+    @Override
     public double getDurationSeconds() {
-        return durationSeconds;
+        double min = this.durationSeconds / 60;
+        return min;
     }
 
     public int getReleaseYear() {
@@ -40,22 +42,36 @@ class Media implements Payable {
     }
 
     @Override
-    public boolean equals(Object obj) {
-        if (this == obj) {
-            return true;
+    public int compareTo(Media other) {
+        int result = this.getTitle().compareToIgnoreCase(other.getTitle());
+        if (result == 0) {
+            if (this.getReleaseYear() < other.getReleaseYear()) {
+                return -1;
+            } else if (this.getReleaseYear() > other.getReleaseYear()) {
+                return 1;
+            } else if (this.getReleaseYear() == other.getReleaseYear()) {
+                return 0;
+            }
+        } else if (result != 0) {
+            return result;
         }
-        if (obj == null || !(obj instanceof Media)) {
+        return 0;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj)
+            return true;
+        if (!(obj instanceof Media))
             return false;
 
-        }
         Media other = (Media) obj;
-        if (this.getTitle() == null) {
-            return other.getTitle() == null;
+
+        if (this.artist == null || other.artist == null) {
+            return this.artist == other.artist;
         }
-        if (!(this.getTitle().equalsIgnoreCase(other.title))) {
-            return false;
-        }
-        return true;
+
+        return this.artist.getName().equalsIgnoreCase(other.artist.getName());
     }
 
 }

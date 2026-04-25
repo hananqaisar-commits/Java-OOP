@@ -2,7 +2,7 @@ import java.util.ArrayList;
 
 class Playlist {
     private String playlistName;
-    static ArrayList<Media> items;
+    ArrayList<Media> items = new ArrayList<>();
 
     public Playlist(String playlistName) {
         this.playlistName = playlistName;
@@ -38,9 +38,11 @@ class Playlist {
     public void playAll(Playlist otherobj) {
         for (Media n : otherobj.items) {
             if (n instanceof Song) {
+                System.out.println("Song: ");
                 n.play();
             }
             if (n instanceof PodcastEp) {
+                System.out.println("Podcast: ");
                 n.play();
             }
         }

@@ -1,6 +1,6 @@
-FROM eclipse-temurin openjdk:17
+FROM eclipse-temurin:17
 WORKDIR /app
-COPY /app
+COPY . .
 RUN javac *.java
-CMD ["java" "Tester"]
+CMD ["java" ,"Tester"]
 

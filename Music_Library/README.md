@@ -53,6 +53,10 @@ java -cp out Main
 docker build -t music-library .
 docker run -it music-library
 ```
+### Debugging from bash
+```bash
+docker run -it music-app-java /bin/bash
+```
 
 ---
 

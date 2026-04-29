@@ -17,16 +17,29 @@ A CLI-based Java application to manage your personal music collection — add so
 ## Project Structure
 
 ```
-Music_Library/
-├── src/
-│   ├── Main.java         # Entry point
-│   ├── Music.java        # Song model
-│   ├── Playlist.java     # Playlist logic
-│   └── Tester.java       # Tests
+.
 ├── Dockerfile
-├── .dockerignore
-├── .gitignore
-└── README.md
+├── README.md
+└── src
+    ├── Artist.java
+    ├── Comparator.java
+    ├── Media.java
+    ├── out
+    │   ├── Artist.class
+    │   ├── Media.class
+    │   ├── Playable.class
+    │   ├── Playlist.class
+    │   ├── PodcastEp.class
+    │   ├── Song.class
+    │   ├── sortByduration.class
+    │   ├── sortByreleaseYear.class
+    │   └── Tester.class
+    ├── Playable.java
+    ├── Playlist.java
+    ├── PodcastEp.java
+    ├── Song.java
+    └── Tester.java
+
 ```
 
 ---
@@ -44,13 +57,13 @@ Music_Library/
 git clone https://github.com/your-username/music-library.git
 cd music-library
 javac -d out src/*.java
-java -cp out Main
+java -cp out Tester
 ```
 
 ### Run with Docker 🐳
 
 ```bash
-docker build -t music-library .
+docker build -t music-library . #run from directory
 docker run -it music-library
 ```
 ### Debuuging from bash in container

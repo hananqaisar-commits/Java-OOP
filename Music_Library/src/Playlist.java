@@ -49,4 +49,9 @@ class Playlist {
         }
 
     }
+
+    @Override
+    public String toString() {
+        return String.format("Playlist: %s | Size: %d", getPlaylistName(), getSize(this));
+    }
 }

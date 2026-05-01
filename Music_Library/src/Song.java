@@ -15,10 +15,24 @@ class Song extends Media {
     }
 
     @Override
+    public boolean equals(Object obj) {
+        if (this == obj)
+            return true;
+
+        if (!(obj instanceof Song))
+            return false;
+
+        Song other = (Song) obj;
+
+        return this.getGenre().equals(other.getGenre());
+    }
+
+    @Override
     public void play() {
 
         super.play();
-        System.out.printf("\t\tPlaying Song:%s by %s duration:%f [%s]\n", getTitle(), getArtist(), getDurationSeconds(),
+        System.out.printf("\t\tPlaying Song:%s by %s duration:%f [%s] \n", getTitle(), getArtist(),
+                getDurationSeconds(),
                 getGenre());
     }
 }

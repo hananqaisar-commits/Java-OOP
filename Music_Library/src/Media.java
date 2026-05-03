@@ -1,5 +1,3 @@
-import java.util.ArrayList;
-
 class Media implements Playable, Comparable<Media> {
     private String title;
     public double durationSeconds;
@@ -7,6 +5,7 @@ class Media implements Playable, Comparable<Media> {
     public Artist artist;
 
     public Media(String title, int durationSeconds, int releaseYear) {
+        // check input strictly no null etc is valid
         if (title == null || title.trim().isEmpty()) {
             System.out.println("Invalid");
         } else {
@@ -25,6 +24,10 @@ class Media implements Playable, Comparable<Media> {
         }
     }
 
+    public String getArtistInfo() {
+        return String.format("Artist: %s", artist.getName());
+    }
+
     public Artist getArtist() {
         return artist;
     }
@@ -34,24 +37,17 @@ class Media implements Playable, Comparable<Media> {
     }
 
     @Override
-    public double getDurationSeconds() {
-        double min = this.durationSeconds / 60;
-        return min;
+    public double getDurationSeconds() {// getduration second will return in minutes
+        double minutes = this.durationSeconds / 60;
+        return minutes;
     }
 
     public int getReleaseYear() {
         return releaseYear;
     }
 
-    public static double totalDuration(ArrayList<Media> list) {
-        double sec = 0.00;
-        for (Media media : list) {
-            sec = sec + media.getDurationSeconds();
-        }
-        return sec;
-    }
-
-    @Override // i am overridding comapreTo method of comparable class it result int....0 mean
+    @Override // i am overridding comapreTo method of comparable class it result return
+              // int....0 mean
               // true, poitive mean swap it and negative mean don't swap it
     public int compareTo(Media other) {
         int result = this.getTitle().compareToIgnoreCase(other.getTitle());// .compareToIgnorecase will compare nut
@@ -61,8 +57,6 @@ class Media implements Playable, Comparable<Media> {
                 return 1;//
             } else if (this.getReleaseYear() < other.getReleaseYear()) {
                 return -1;
-            } else if (this.getReleaseYear() == other.getReleaseYear()) {
-                return 0;// it will sort naturally
             }
         }
         return result;// here use title result for sorting
@@ -78,11 +72,16 @@ class Media implements Playable, Comparable<Media> {
 
         Media other = (Media) obj;
 
-        if (this.artist == null || other.artist == null) {
-            return this.artist == other.artist;
+        if (this.getDurationSeconds() != getDurationSeconds()) {
+            return false;
         }
-
-        return this.artist.getName().equalsIgnoreCase(other.artist.getName());
+        if (this.getReleaseYear() != other.getReleaseYear()) {
+            return false;
+        }
+        if (this.getTitle() != other.getTitle()) {
+            return false;
+        }
+        return this.artist.equals(other.artist);
     }
 
     @Override

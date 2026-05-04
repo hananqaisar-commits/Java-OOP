@@ -37,9 +37,13 @@ class Media implements Playable, Comparable<Media> {
     }
 
     @Override
-    public double getDurationSeconds() {// getduration second will return in minutes
-        double minutes = this.durationSeconds / 60;
-        return minutes;
+    public double getDurationSeconds() {
+        double seconds = this.durationSeconds;
+        return seconds;
+    }
+
+    public int return_min() {
+        return (int) getDurationSeconds() % 60;
     }
 
     public int getReleaseYear() {
@@ -86,7 +90,7 @@ class Media implements Playable, Comparable<Media> {
 
     @Override
     public String toString() {
-        return String.format("Title: %s | Duration: %.2f mins | Release Year: %d | Artist: %s",
-                getTitle(), getDurationSeconds(), getReleaseYear(), getArtist());
+        return String.format("Title: %s | Duration: %d mins | Release Year: %d | Artist: %s",
+                getTitle(), return_min(), getReleaseYear(), getArtist());
     }
 }
